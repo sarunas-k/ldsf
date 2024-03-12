@@ -3,6 +3,7 @@ wp-config-sample.php
 node_modules
 /wp-admin/
 /wp-includes/
+/wp-content/themes/oceanwp2/
 .htaccess
 /wp-content/languages/
 /wp-content/upgrade/
