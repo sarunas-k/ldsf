@@ -1,0 +1,10 @@
+wp-config.php
+wp-config-sample.php
+node_modules
+/wp-admin/
+/wp-includes/
+.htaccess
+/wp-content/languages/
+/wp-content/upgrade/
+/wp-content/uploads/
+/wp-content/plugins/
