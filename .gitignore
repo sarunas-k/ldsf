@@ -9,3 +9,9 @@ node_modules
 /wp-content/upgrade/
 /wp-content/uploads/
 /wp-content/plugins/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+/LICENSE
