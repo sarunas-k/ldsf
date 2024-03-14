@@ -15,7 +15,7 @@
 				<?php esc_html_e( 'Nieko nerasta pagal paiešką: "', 'oceanwp' ); ?>
 				<?php echo get_search_query() . '"' ?>
 			</h2>
-			<?php echo get_search_shortcode(); ?>
+			<?php echo get_my_block('search-field') ?>
 		</p>
 	<?php } elseif ( is_category() ) { ?>
 		<p>

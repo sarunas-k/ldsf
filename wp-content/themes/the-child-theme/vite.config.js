@@ -3,8 +3,7 @@ import { resolve } from 'path';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 const css = {
-    'stiliai':          './assets/css/bundle.js',
-    'htmega-widgets':   '../../plugins/ht-mega-for-elementor/assets/css/htmega-widgets.css'
+    'stiliai': './assets/css/bundle.js'
 };
 export default defineConfig(() => {
     return {
@@ -18,7 +17,8 @@ export default defineConfig(() => {
         ],
         build: {
             lib: {
-                entry: css
+              name: 'config',
+              entry: css
             },
             cssCodeSplit: true,
             minify: true,
@@ -27,8 +27,6 @@ export default defineConfig(() => {
                   assetFileNames: (assetInfo) => {
                     if (assetInfo.name == "stiliai.css")
                         return "stiliai.min.css";
-                    else if (assetInfo.name == "htmega-widgets.css")
-                        return "htmega-widgets.min.css";
                     return assetInfo.name;
                   },
                 },

@@ -114,7 +114,7 @@ if ( 'on' === get_theme_mod( 'ocean_error_page_blank', 'off' ) ) { ?>
 
 													<h2 class="error-title"><?php esc_html_e( 'Puslapis nerastas!', 'oceanwp' ); ?></h2>
 													<p class="error-text"><?php esc_html_e( 'Apgailestaujame, tačiau puslapio, kurio ieškote nėra.', 'oceanwp' ); ?><br /><?php esc_html_e( 'Galbūt rasite ko ieškote per puslapio paiešką:.', 'oceanwp' ); ?></p>
-													<?php echo get_search_shortcode(); ?>
+													<?php echo get_my_block('search-field') ?>
 													<a class="error-btn button" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Grįžti į pagrindinį puslapį', 'oceanwp' ); ?></a>
 
 												</div><!-- .error404-content -->

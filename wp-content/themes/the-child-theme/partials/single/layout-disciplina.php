@@ -55,13 +55,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		}
 		?>
 			<div class="renginiai">
-				<h2><?php echo 'Artimiausi renginiai. ' . get_the_title(); ?></h2>
+				<h2>
+					<?php echo 'Artimiausi renginiai. ' . get_the_title(); ?>
+				</h2>
 				<?php 
-				echo get_my_block('renginiai', ['tema' => get_the_title()]); ?>
+
+				get_my_block('renginiai', ['tema' => get_the_title()]); ?>
+
 			</div>
 		</div>
 		<div class="col-md-4">
-			<?php echo get_disciplina_sidebar_shortcode() ?>
+
+			<?php get_my_block('small-sidebar') ?>
+			
 		</div>
 	</div>
 	

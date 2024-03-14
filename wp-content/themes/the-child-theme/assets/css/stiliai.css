@@ -155,3 +155,104 @@
     color: #FFFFFF;
     margin-top: 20px;
 }
+.custom-slider-container {
+    width: 100%;
+}
+.custom-slider {
+    visibility: hidden;
+}
+.custom-slider.slick-initialized {
+    visibility: visible;
+}
+.custom-slider .slick-track {
+    display: flex;
+    align-items: center;
+}
+.custom-slider .slick-slide {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.custom-slider .slick-slide .custom-slide-image {
+    text-align: center;
+}
+.custom-slider .slick-slide .custom-slide-image img {
+    display: inline-block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.custom-slider .slick-slide .custom-slide-title {
+    height: 36px;
+    background-color: #778B8D;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 36px;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    font-weight: 500;
+}
+.custom-slider .slick-arrow:before {
+    display: inline-block;
+    font: normal normal normal 30px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#778B8D !important;
+    z-index: 99;
+}
+.custom-slider.gallery-slider .slick-arrow:before {
+    font-size: 20px;
+}
+.custom-slider.post-slider .slick-prev:before {
+    content: "\f104";
+}
+.custom-slider.post-slider .slick-next:before {
+    content: "\f105";
+}
+.custom-slider.gallery-slider .slick-next:before {
+    content: "\f138";
+}
+.custom-slider.gallery-slider .slick-prev:before {
+    content: "\f137";
+}
+
+@media (max-width: 1366px) {
+    .custom-slider {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .custom-slider .slick-prev {
+        left: 10px;
+    }
+    .custom-slider .slick-next {
+        right: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .custom-slider {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .custom-slider .slick-prev {
+        left: -5px;
+    }
+    .custom-slider .slick-next {
+        right: -5px;
+    }
+}
+.renginiai-accordion .accordion-button {
+    font-size: 14px;
+}
+.renginiai-accordion .accordion-button:hover {
+    color: #FFFFFF;
+}
+.renginiai-accordion .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(50 74 109 / 50%);
+    border-color: #324a6d;
+}
+.renginiai-accordion .accordion-button:not(.collapsed) {
+    color: #324a6d;
+}

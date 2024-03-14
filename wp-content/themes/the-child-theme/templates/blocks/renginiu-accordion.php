@@ -1,5 +1,5 @@
 
-<div class="accordion accordion-flush open" id="accordionFlush">
+<div class="accordion accordion-flush open renginiai-accordion" id="accordionFlush">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
@@ -8,7 +8,7 @@
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
       <div class="accordion-body">
-        <?php echo do_shortcode('[sectionCode id="renginiai" grupe="1"]'); ?>
+        <?php get_my_block('renginiai', ['grupe' => 1]); ?>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
       <div class="accordion-body">
-      <?php echo do_shortcode('[sectionCode id="renginiai" grupe="2"]'); ?>
+      <?php get_my_block('renginiai', ['grupe' => 2]); ?>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
         <div class="accordion-body">
-            <?php echo do_shortcode('[sectionCode id="renginiai" grupe="3"]'); ?>
+            <?php get_my_block('renginiai', ['grupe' => 3]); ?>
         </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
     </h2>
     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush">
       <div class="accordion-body">
-        <?php echo do_shortcode('[sectionCode id="renginiai" grupe="4"]'); ?>
+        <?php get_my_block('renginiai', ['grupe' => 4]); ?>
       </div>
     </div>
   </div>
