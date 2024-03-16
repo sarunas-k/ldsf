@@ -111,6 +111,9 @@ function do_shortcode_func( $args ) {
 	} else if ($args['block'] == 'search-field') {
 		echo do_shortcode('[oceanwp_library id="1262"]');
 
+	} else if ($args['block'] == 'post-grid') {
+		get_template_part('./templates/blocks/custom-post-grid', null, $args);
+
 	}
 }
 
@@ -143,3 +146,12 @@ function my_edit_enqueue_elementor() {
 function get_narys_thumbnail_path() {
 	return get_site_url() . '/wp-content/uploads/2024/02/narys-logo-1-300x233.jpg';
 }
+
+function set_custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'set_custom_excerpt_length', 999 );
+add_image_size( 'crop-1', 400, 230, true );
+add_image_size( 'crop-2', 600, 345, true );
+add_image_size( 'crop-3', 800, 460, true );
+add_image_size( 'crop-4', 1000, 600, true );

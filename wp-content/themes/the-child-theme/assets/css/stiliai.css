@@ -71,7 +71,8 @@
 }
 @media (max-width: 1024px) {
    .custom-blog-entries article {
-      
+      width: 48% !important;
+      margin-bottom: 2%;
    }
 
 } 
@@ -236,11 +237,17 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    .custom-slider .slick-prev {
-        left: -5px;
+    .custom-slider.post-slider .slick-prev {
+        left: 0;
     }
-    .custom-slider .slick-next {
-        right: -5px;
+    .custom-slider.post-slider .slick-next {
+        right: 0;
+    }
+    .custom-slider.gallery-slider .slick-prev {
+        left: -10px;
+    }
+    .custom-slider.gallery-slider .slick-next {
+        right: -10px;
     }
 }
 .renginiai-accordion .accordion-button {
@@ -255,4 +262,69 @@
 }
 .renginiai-accordion .accordion-button:not(.collapsed) {
     color: #324a6d;
+}
+.custom-post-grid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.custom-post-grid p {
+    color: #636363;
+}
+.custom-post-grid .item-wrapper {
+    position: relative;
+}
+.custom-post-grid .custom-post-grid-item {
+    height: 100%;
+}
+.box-shadow {
+    box-shadow: 0 0 20px #0000004f;
+}
+.custom-post-grid .custom-post-grid-item a {
+    color: #1b3e41;
+}
+.custom-post-grid .custom-post-grid-item a:hover {
+    color: #dd3333;
+}
+.custom-post-grid .custom-post-grid-item .custom-post-grid-image {
+    text-align: center;
+}
+.custom-post-grid .custom-post-grid-item .custom-post-grid-content {
+    color: #1b3e41;
+    padding: 15px;
+    padding-bottom: 40px;
+}
+.custom-post-grid h3 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.custom-post-grid.grid-item-small h3 {
+    font-size: 14px;
+}
+.custom-post-grid.grid-item-large h3 {
+    font-size: 18px;
+}
+.custom-post-grid .custom-post-grid-content .custom-post-grid-footer p {
+    font-size: 13px;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 25px;
+    color:#979797;
+}
+.custom-post-grid .custom-post-grid-content .custom-post-grid-footer p::before {
+    content: '\f133 ';
+    font: normal normal normal 13px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 5px;
+}
+.all-news h2 {
+    font-size: 4.8em;
+    color: #1b3e41;
+}
+@media(max-width: 1024px) {
+    .all-news h2 {
+        font-size: 3em;
+    }
 }
