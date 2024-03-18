@@ -89,20 +89,20 @@ function do_shortcode_func( $args ) {
 		return;
 	ob_start();
 	if ($args['block'] == 'renginiai') {
-		get_template_part('./templates/blocks/renginiai-list-box', null, $args);
+		get_template_part('./partials/blocks/renginiai-list-box', null, $args);
 			
 	} else if ($args['block'] == 'rezultatai') {
-		get_template_part('./templates/blocks/rezultatai-list-box');
+		get_template_part('./partials/blocks/rezultatai-list-box');
 
 	} else if ($args['block'] == 'renginiu-temos') {
-		get_template_part('./templates/blocks/renginiu-temos');
+		get_template_part('./partials/blocks/renginiu-temos');
 		wp_enqueue_script('renginiu-temos', get_theme_file_uri() . '/assets/js/renginiu-temos.js');
 
 	} else if ($args['block'] == 'renginiu-accordion') {
-		get_template_part('./templates/blocks/renginiu-accordion');
+		get_template_part('./partials/blocks/renginiu-accordion');
 
 	} else if ($args['block'] == 'slider') {
-		get_template_part('./templates/blocks/custom-slider', null, $args);
+		get_template_part('./partials/blocks/custom-slider', null, $args);
 		load_slider_assets();
 
 	} else if ($args['block'] == 'small-sidebar') {
@@ -112,7 +112,7 @@ function do_shortcode_func( $args ) {
 		echo do_shortcode('[oceanwp_library id="1262"]');
 
 	} else if ($args['block'] == 'post-grid') {
-		get_template_part('./templates/blocks/custom-post-grid', null, $args);
+		get_template_part('./partials/blocks/custom-post-grid', null, $args);
 
 	}
 	return ob_get_clean();
