@@ -4,6 +4,7 @@ node_modules
 /wp-admin/
 /wp-includes/
 /wp-content/themes/oceanwp2/
+/wp-content/themes/twentytwentythree/
 .htaccess
 /wp-content/languages/
 /wp-content/upgrade/
@@ -16,3 +17,4 @@ node_modules
 /xmlrpc.php
 /LICENSE
 /.vscode/
+.gitignore

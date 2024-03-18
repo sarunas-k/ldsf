@@ -169,6 +169,9 @@
     display: flex;
     align-items: center;
 }
+.custom-slider .slick-track a {
+    text-decoration: none !important;
+}
 .custom-slider .slick-slide {
     margin-left: 5px;
     margin-right: 5px;
@@ -203,6 +206,9 @@
     -moz-osx-font-smoothing: grayscale;
     color:#778B8D !important;
     z-index: 99;
+}
+.custom-slider.gallery-slider {
+    margin: 10px;
 }
 .custom-slider.gallery-slider .slick-arrow:before {
     font-size: 20px;
@@ -281,9 +287,11 @@
 }
 .custom-post-grid .custom-post-grid-item a {
     color: #1b3e41;
+    text-decoration: none !important;
 }
 .custom-post-grid .custom-post-grid-item a:hover {
     color: #dd3333;
+    text-decoration: none !important;
 }
 .custom-post-grid .custom-post-grid-item .custom-post-grid-image {
     text-align: center;
@@ -295,7 +303,7 @@
 }
 .custom-post-grid h3 {
     font-family: "Poppins", Sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
 }
 .custom-post-grid.grid-item-small h3 {
@@ -327,4 +335,30 @@
     .all-news h2 {
         font-size: 3em;
     }
+}
+.main-content-group-block > * {
+    width: 100%;
+    max-width: 1400px !important;
+}
+@media (max-width: 1400px) {
+    .main-content-group-block {
+        padding: 0 30px;
+    }
+}
+.main-content-group-block .main-columns-block {
+    padding-top: 20px;
+}
+.main-content-group-block h2.main-page-heading {
+    padding: 0 !important;
+    line-height: 36px !important;
+}
+.main-content-group-block .main-page-button {
+    margin-left: 10px !important;
+}
+.main-content-group-block .main-page-button a {
+    color: #FFFFFF;
+    padding: 4px 18px;
+}
+.main-content-group-block .main-page-button a:hover {
+    color: #FFFFFF;
 }

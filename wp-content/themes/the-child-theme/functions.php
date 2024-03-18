@@ -79,7 +79,7 @@ function get_my_block($block, $args = array()) {
 	if (!$block)
 		return;
 	$args['block'] = $block;
-	do_shortcode_func($args);
+	echo do_shortcode_func($args);
 }
 
 // Shortcodes
@@ -87,7 +87,7 @@ add_shortcode( 'sectionCode', 'do_shortcode_func' );
 function do_shortcode_func( $args ) {
 	if (!array_key_exists('block', $args))
 		return;
-
+	ob_start();
 	if ($args['block'] == 'renginiai') {
 		get_template_part('./templates/blocks/renginiai-list-box', null, $args);
 			
@@ -115,6 +115,7 @@ function do_shortcode_func( $args ) {
 		get_template_part('./templates/blocks/custom-post-grid', null, $args);
 
 	}
+	return ob_get_clean();
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_my_assets', 9);
