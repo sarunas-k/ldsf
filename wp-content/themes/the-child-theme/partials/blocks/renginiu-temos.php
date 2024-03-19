@@ -1,5 +1,12 @@
 <?php
-
+/*  
+ * Layout block: Dropdown with a button to find posts by taxonomy 
+ *          (Post type: renginys, Taxonomy: renginio-tema)
+ * 
+ * Rendering to DOM:
+ * get_my_block('renginiu-temos')
+ * 
+ */
 $temos = get_terms(array(
     'taxonomy' => 'renginio-tema',
     'hide_empty' => false)

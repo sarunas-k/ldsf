@@ -128,14 +128,14 @@ function load_slider_assets() {
 	wp_enqueue_script('custom-slider', get_theme_file_uri() . '/assets/js/custom-slider-script.js', ['jquery-core', 'jquery-slick-script', 'all-helper']);
 }
 function enqueue_my_assets() {
-	// CSS minimized stiliai.css
-	wp_enqueue_style( 'stiliai', get_theme_file_uri() . '/build/stiliai.min.css');
 
 	// CSS/JS Bootstrap
 	wp_enqueue_style( 'bootstrap.min', get_theme_file_uri() . '/assets/css/bootstrap/bootstrap.min.css');
 	wp_enqueue_script( 'bootstrap.bundle.min', get_theme_file_uri() . '/assets/js/bootstrap/bootstrap.bundle.min.js');
 
 	wp_enqueue_script('all-helper', get_theme_file_uri() . '/assets/js/all.js', ['jquery-core']);
+	// CSS minimized stiliai.css
+	wp_enqueue_style( 'stiliai', get_theme_file_uri() . '/build/stiliai.min.css', ['oceanwp-style', 'wp-block-library', 'bootstrap.min']);
 	
 }
 

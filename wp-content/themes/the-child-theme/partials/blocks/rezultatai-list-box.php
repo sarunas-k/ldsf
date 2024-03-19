@@ -1,4 +1,12 @@
 <?php
+/*  
+ * Layout block: Posts list 
+ *              (Post type: Rezultatas)
+ * 
+ * Rendering to DOM:
+ * get_my_block('rezultatai')
+ * 
+ */
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $rezultatai = new WP_Query( 
     array(

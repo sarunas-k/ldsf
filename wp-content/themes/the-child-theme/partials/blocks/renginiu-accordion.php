@@ -1,4 +1,13 @@
-
+<?php
+/*  
+ * Layout block: Accordion of posts for this year 
+ *              (Post type: Renginys)
+ * 
+ * Rendering to DOM:
+ * get_my_block('renginiu-accordion')
+ * 
+ */
+?>
 <div class="accordion accordion-flush open renginiai-accordion" id="accordionFlush">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">

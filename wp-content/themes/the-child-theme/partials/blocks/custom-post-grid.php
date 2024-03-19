@@ -1,4 +1,19 @@
 <?php
+/*  
+ * Layout block: Posts grid
+ * 
+ * Rendering to DOM:
+ * get_my_block('post-grid', $arguments)
+ * 
+ * @arguments Array
+ * post_type:   required
+ * limit:       optional (number of posts to show 1-N)
+ * start:       optional (starting post number in query 1-N)
+ * image_size:  optional (1-4) default: 4
+ * columns:     optional (grid layout columns 1-3) default: 1
+ * margin:      optional (1-5) default: 3
+ * 
+ */
 if (!array_key_exists('post_type', $args))
     return;
 

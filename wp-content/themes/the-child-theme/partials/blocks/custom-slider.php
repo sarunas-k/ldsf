@@ -1,4 +1,18 @@
-<?php if (!array_key_exists('post_type', $args) && !array_key_exists('gallery', $args))
+<?php
+/*  
+ * Slider (carousel) custom block
+ * 
+ * Rendering to DOM:
+ * get_my_block('slider', $arguments)
+ * 
+ * @arguments Array
+ * post_type:   optional (post type to use as slider items )
+ * gallery:     optional (any post id with an image gallery)
+ *              required one of above
+ * show:        optional (slides on screen) default: 5
+ * 
+ */
+if (!array_key_exists('post_type', $args) && !array_key_exists('gallery', $args))
     return;
 
 // How many slides to show on screen, if not set by user

@@ -1,4 +1,16 @@
 <?php
+/*  
+ * Layout block: Posts list 
+ *              (Post type: Renginys)
+ * 
+ * Rendering to DOM:
+ * get_my_block('renginiai', $arguments)
+ * 
+ * @arguments Array
+ * tema:        optional (filter posts by renginio-tema taxonomy name)
+ * grupe:       optional (filter posts by 3 month steps of this year. 1-4)
+ * 
+ */
 if (array_key_exists('tema', $args) || array_key_exists('grupe', $args)) {
     if (array_key_exists('tema', $args)) {
         $renginiai = new WP_Query( 

@@ -20,7 +20,7 @@
     text-align: center !important;
     padding: 20px !important;
 }
-.events-table thead, .results-table th {
+.events-table thead, .results-table thead {
     border-top-color:#a3b4b7 !important;
     color: #a0afb1;
 }
@@ -33,6 +33,21 @@
 .events-table td, .results-table td {
     font-size: 13px;
     padding: 10px 20px !important;
+}
+@media screen and (max-width: 1024px) {
+    .table.events-table thead, .table.results-table thead {
+        display: none;
+    }
+    table.table.events-table tbody, table.table.results-table tbody {
+        border-top: none;
+    }
+    table.table.events-table tbody td, table.table.results-table tbody td {
+        display: block;
+        text-align: center;
+    }
+    table.table.events-table tbody tr, table.table.results-table tbody tr {
+        border-bottom: 1px solid #606060;
+    }
 }
 .custom-blog-entries .blog-entry-team .blog-entry-thumbnail {
     max-height: 189px;
@@ -69,7 +84,7 @@
     float: left;
     margin-right: 2%;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
    .custom-blog-entries article {
       width: 48% !important;
       margin-bottom: 2%;
@@ -226,7 +241,7 @@
     content: "\f137";
 }
 
-@media (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
     .custom-slider {
         padding-left: 30px;
         padding-right: 30px;
@@ -238,7 +253,7 @@
         right: 10px;
     }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .custom-slider {
         padding-left: 15px;
         padding-right: 15px;
@@ -331,7 +346,7 @@
     font-size: 4.8em;
     color: #1b3e41;
 }
-@media(max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .all-news h2 {
         font-size: 3em;
     }
@@ -340,9 +355,14 @@
     width: 100%;
     max-width: 1400px !important;
 }
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
     .main-content-group-block {
         padding: 0 30px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main-content-group-block {
+        padding: 0 10px;
     }
 }
 .main-content-group-block .main-columns-block {
@@ -351,6 +371,7 @@
 .main-content-group-block h2.main-page-heading {
     padding: 0 !important;
     line-height: 36px !important;
+    width: 100%;
 }
 .main-content-group-block .main-page-button {
     margin-left: 10px !important;
