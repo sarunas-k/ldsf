@@ -8,6 +8,7 @@ node_modules
 .htaccess
 /wp-content/languages/
 /wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
 /wp-content/uploads/
 /wp-content/plugins/
 /index.php
