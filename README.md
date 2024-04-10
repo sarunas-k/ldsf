@@ -1,8 +1,4 @@
 # wp-website
- Custom theme and website
-
-* Custom layout blocks (/wp-content/themes/the-child-theme/partials/blocks)
-* Custom post types (Narys, Naujiena, Rezultatas, Disciplina, Renginys)
-* Custom taxonomies (Naujienų temos, renginių temos)
-* Node.js source file minimization for better loading times
- 
+#### Website built from empty boilerplate with Wordpress content management.
+* Wordpress theme with custom code of layout blocks, post types, taxonomies for showing different content.
+* Minimized source code with Node.js build tools
