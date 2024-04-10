@@ -299,6 +299,16 @@ html {
     .custom-slider .slick-slide .custom-slide-title {
         font-size: 0.9rem;
     }
+    #wrap header .site-logo-ldsf {
+        width: 200px;
+    }
+    #wrap header nav .hfe-nav-menu ul li a {
+        font-size: 0.8rem;
+    }
+    #wrap header .hfe-nav-menu__layout-horizontal .hfe-nav-menu .sub-arrow {
+        margin-left: 4px;
+        font-size: 0.8rem;
+    }
 }
 @media screen and (max-width: 650px) {
     #content-wrap .custom-slider.post-slider .slick-slide {
@@ -341,6 +351,17 @@ html {
     }
     .group-partners figure img {
         scale: 0.7;
+    }
+    #wrap header .site-navigation-ldsf {
+        align-items: center;
+    }
+    #wrap header .site-navigation-ldsf nav {
+        left: unset;
+        right: 0;
+        width: calc(100vw - 80px);
+    }
+    #wrap header .site-navigation-ldsf > div:first-child {
+        flex-grow: 1;
     }
 }
 .renginiai-accordion .accordion-button {
@@ -425,6 +446,31 @@ html {
     .all-news h2 {
         font-size: 3em;
     }
+    .main-content-group-block {
+        padding: 0 10px;
+    }
+    #content-wrap .main-content-group-block .main-columns-block .bottom-slider {
+        padding: 0;
+    }
+    #wrap header .site-navigation-ldsf nav > ul > li {
+        padding: 0 2rem;
+    }
+    #wrap header .site-navigation-ldsf nav > ul > li:first-child {
+        padding-top: 1rem;
+    }
+    #wrap header .site-navigation-ldsf nav {
+        top: 58px;
+        position: absolute;
+    }
+    #wrap header .site-navigation-ldsf nav ul li a {
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: #c8d5dc;
+    }
+    #wrap header .site-navigation-ldsf nav ul li a:hover,
+    #wrap header .site-navigation-ldsf nav ul li a:focus {
+        color: white !important;
+    }
 }
 .main-content-group-block > * {
     width: 100%;
@@ -433,14 +479,6 @@ html {
 @media screen and (max-width: 1400px) {
     .main-content-group-block {
         padding: 0 30px;
-    }
-}
-@media screen and (max-width: 1023px) {
-    .main-content-group-block {
-        padding: 0 10px;
-    }
-    #content-wrap .main-content-group-block .main-columns-block .bottom-slider {
-        padding: 0;
     }
 }
 .main-content-group-block .main-columns-block {
@@ -477,4 +515,15 @@ html {
 }
 #site-header-inner {
     max-width: 100%;
+}
+#wrap header nav {
+    font-size: initial;
+    letter-spacing: -.03rem;
+}
+header nav:not(.hfe-dropdown) a.hfe-menu-item {
+    color: #324a6d;
+}
+#wrap header nav > ul > li a.hfe-menu-item:hover,
+#wrap header nav > ul > li a.hfe-menu-item:focus {
+    outline: none !important;
 }
