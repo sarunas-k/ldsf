@@ -1,10 +1,10 @@
 <?php
-/*  
+/*
  * Layout block: Posts grid
- * 
+ *
  * Rendering to DOM:
  * get_my_block('post-grid', $arguments)
- * 
+ *
  * @arguments Array
  * post_type:   required
  * limit:       optional (number of posts to show 1-N)
@@ -12,7 +12,7 @@
  * image_size:  optional (1-4) default: 4
  * columns:     optional (grid layout columns 1-3) default: 1
  * margin:      optional (1-5) default: 3
- * 
+ *
  */
 if (!array_key_exists('post_type', $args))
     return;
@@ -40,12 +40,12 @@ if (array_key_exists('image_size', $args) && is_numeric($args['image_size']))
     $image_size = $args['image_size'];
 
 // COLUMNS
-$columnClass = 'col-sm-12';
+$columnClass = 'col-xs-12';
 if (array_key_exists('columns', $args)) {
     if ($args['columns'] == 2) {
         $columnClass = 'col-sm-6';
     } elseif ($args['columns'] == 3) {
-        $columnClass = 'col-sm-4';
+        $columnClass = 'col-sm-6 col-lg-4';
     }
 }
 
@@ -78,8 +78,8 @@ if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
                             </a>
                         </h3>
                         <?php if (array_key_exists('excerpt', $args) && $args['excerpt'] == true) {
-                                 the_excerpt(); 
-                         } 
+                                 the_excerpt();
+                         }
                          if (array_key_exists('date', $args) && $args['date'] == true) { ?>
                             <div class="custom-post-grid-footer">
                                     <p><?php echo get_the_date(); ?></p>
@@ -88,7 +88,7 @@ if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
                     </div>
                 </div>
             </div>
-        <?php 
+        <?php
         }
         ?>
     </div>
