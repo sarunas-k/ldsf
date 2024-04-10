@@ -155,3 +155,14 @@ add_image_size( 'crop-1', 400, 230, true );
 add_image_size( 'crop-2', 600, 345, true );
 add_image_size( 'crop-3', 800, 460, true );
 add_image_size( 'crop-4', 1000, 600, true );
+
+add_filter('gettext', 'change_translations');
+function change_translations($words) {
+	switch ($words) {
+		case '&laquo; Ankstesnis':
+			return 'Atgal';
+		case 'Kitas &raquo;':
+			return 'Toliau';
+	}
+	return $words;
+}

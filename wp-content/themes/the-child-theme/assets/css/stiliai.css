@@ -26,6 +26,15 @@
 .events-table, .results-table {
     color: #5D6B6D !important;
 }
+#content-wrap .events-table > tbody > tr > td > a,
+#content-wrap .results-table > tbody > tr > td > a {
+    color: #5D6B6D;
+    text-decoration: none;
+}
+#content-wrap .events-table > tbody > tr > td > a:hover,
+#content-wrap .results-table > tbody > tr > td > a:hover {
+    text-decoration: underline;
+}
 .events-table th, .results-table th {
     text-align: center !important;
     padding: 20px !important;
@@ -169,13 +178,20 @@
     width: 5%;
     border-top: 5px solid #000000;
 }
-.pagination-buttons {
+#content-wrap .pagination-buttons {
     text-align: center;
 }
-.pagination-buttons .page-numbers {
-    padding: 10px;
+#content-wrap .pagination-buttons .page-numbers {
+    padding: 0.5rem 1.5rem;
     border: 1px solid #c6c6c6;
     display: inline-block;
+}
+#content-wrap .pagination-buttons .page-numbers {
+    color: #5D6B6D;
+    text-decoration: none;
+}
+#content-wrap .pagination-buttons .page-numbers:not(.current):hover {
+    border-color: #5D6B6D
 }
 .renginiu-temos button {
     color: #FFFFFF;
