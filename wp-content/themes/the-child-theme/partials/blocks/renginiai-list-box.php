@@ -1,22 +1,22 @@
 <?php
-/*  
- * Layout block: Posts list 
+/*
+ * Layout block: Posts list
  *              (Post type: Renginys)
- * 
+ *
  * Rendering to DOM:
  * get_my_block('renginiai', $arguments)
- * 
+ *
  * @arguments Array
  * tema:        optional (filter posts by renginio-tema taxonomy name)
  * grupe:       optional (filter posts by 3 month steps of this year. 1-4)
- * 
+ *
  */
 if (array_key_exists('tema', $args) || array_key_exists('grupe', $args)) {
     if (array_key_exists('tema', $args)) {
-        $renginiai = new WP_Query( 
+        $renginiai = new WP_Query(
             array(
                 'post_type' => 'renginys',
-                'posts_per_page' => 3, 
+                'posts_per_page' => 3,
                 'meta_key' => 'renginio_data',
                 'orderby' => 'meta_value',
                 'order' => 'ASC',
@@ -46,7 +46,7 @@ if (array_key_exists('tema', $args) || array_key_exists('grupe', $args)) {
         } else if ($args['grupe'] == '4') {
             $nuoIki = [date('Y') . '-10-01 00:00:00', date('Y') . '-12-31 00:00:00'];
         }
-        $renginiai = new WP_Query( 
+        $renginiai = new WP_Query(
             array(
                 'post_type' => 'renginys',
                 'meta_key' => 'renginio_data',
@@ -62,10 +62,10 @@ if (array_key_exists('tema', $args) || array_key_exists('grupe', $args)) {
         );
     }
 } else {
-    $renginiai = new WP_Query( 
+    $renginiai = new WP_Query(
         array(
             'post_type' => 'renginys',
-            'posts_per_page' => 3, 
+            'posts_per_page' => 3,
             'meta_key' => 'renginio_data',
             'orderby' => 'meta_value',
             'order' => 'ASC',
@@ -80,14 +80,14 @@ if (array_key_exists('tema', $args) || array_key_exists('grupe', $args)) {
 }
 
 if ($renginiai->have_posts()) {
-    
+
     ?>
     <table class="table events-table">
-    <tbody>
         <thead>
             <th>Data</th>
             <th>Renginys</th>
         </thead>
+        <tbody>
     <?php
     while($renginiai->have_posts()) {
         $renginiai->the_post();
