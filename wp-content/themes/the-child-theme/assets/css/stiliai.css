@@ -270,6 +270,9 @@
     .custom-slider.gallery-slider .slick-next {
         right: -10px;
     }
+    .custom-slider .slick-slide {
+        padding: 5rem;
+    }
 }
 .renginiai-accordion .accordion-button {
     font-size: 14px;
@@ -367,6 +370,9 @@
 }
 .main-content-group-block .main-columns-block {
     padding-top: 20px;
+}
+.main-content-group-block .main-columns-block:has(.bottom-slider) {
+    padding-top: 0;
 }
 .main-content-group-block h2.main-page-heading {
     padding: 0 !important;

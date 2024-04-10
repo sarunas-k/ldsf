@@ -25,7 +25,7 @@ $(document).ready(function(){
         }, {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 1
           }
         }, {
           breakpoint: 300,
@@ -42,7 +42,7 @@ $(document).ready(function(){
     var show = sliderPost.data('show');
 
     if ($.isNumeric(show) && show > 0) {
-  
+
     $('.custom-slider.post-slider').slick({
       autoplay: true,
       autoplaySpeed: 5000,
@@ -60,7 +60,7 @@ $(document).ready(function(){
       }, {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 1
         }
       }, {
         breakpoint: 300,
