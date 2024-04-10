@@ -90,7 +90,7 @@
       margin-bottom: 2%;
    }
 
-} 
+}
 .custom-blog-entries h2 a {
     color: #1b3e41;
 }
@@ -141,7 +141,7 @@
 .single-disciplina .disciplina .entry-header .image-overlay {
     opacity: 0.5;
     background-position: center center;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -382,4 +382,8 @@
 }
 .main-content-group-block .main-page-button a:hover {
     color: #FFFFFF;
+}
+S
+#site-header-inner {
+    max-width: 100%;
 }

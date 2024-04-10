@@ -27,7 +27,7 @@ function oceanwp_child_enqueue_parent_style() {
 
 	// Load the stylesheet.
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
-	
+
 }
 
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
@@ -45,10 +45,10 @@ add_filter( 'acf/shortcode/allow_in_block_themes_outside_content', '__return_tru
 function my_post_layout_class( $class ) {
 	$class = '';
 	// Alter your layout
-	if ( 
-		is_post_type_archive( 'narys' ) || 
-		is_post_type_archive( 'renginys' ) || 
-		is_search() || 
+	if (
+		is_post_type_archive( 'narys' ) ||
+		is_post_type_archive( 'renginys' ) ||
+		is_search() ||
 		is_404()) {
 		$class = 'full-width';
 	}
@@ -90,7 +90,7 @@ function do_shortcode_func( $args ) {
 	ob_start();
 	if ($args['block'] == 'renginiai') {
 		get_template_part('./partials/blocks/renginiai-list-box', null, $args);
-			
+
 	} else if ($args['block'] == 'rezultatai') {
 		get_template_part('./partials/blocks/rezultatai-list-box');
 
@@ -136,7 +136,6 @@ function enqueue_my_assets() {
 	wp_enqueue_script('all-helper', get_theme_file_uri() . '/assets/js/all.js', ['jquery-core']);
 	// CSS minimized stiliai.css
 	wp_enqueue_style( 'stiliai', get_theme_file_uri() . '/build/stiliai.min.css', ['oceanwp-style', 'wp-block-library', 'bootstrap.min']);
-	
 }
 
 // Turn off default CSS
