@@ -1,6 +1,12 @@
 #site-header-inner {
     height: fit-content !important;
 }
+#site-logo img {
+    padding: 1rem;
+}
+:where(.is-layout-flex) {
+    gap: 2rem;
+}
 .blog-entry-thumbnail {
     margin-bottom: 20px;
 }
@@ -390,8 +396,9 @@
 }
 .main-content-group-block h2.main-page-heading {
     padding: 0 !important;
-    line-height: 36px !important;
+    line-height: 4rem !important;
     width: 100%;
+    font-weight: 500;
 }
 .main-content-group-block .main-page-button {
     margin-left: 10px !important;
