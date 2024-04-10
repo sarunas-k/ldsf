@@ -93,7 +93,7 @@ if ($renginiai->have_posts()) {
         $renginiai->the_post();
         ?>
         <tr>
-            <td class="text-center"><?php echo DateTime::createFromFormat('Y-m-d H:i:s', get_field('renginio_data'))->format('Y-m-d'); ?></td>
+            <td class="event-date text-center"><?php echo DateTime::createFromFormat('Y-m-d H:i:s', get_field('renginio_data'))->format('Y-m-d'); ?></td>
             <td><strong><?php the_field('pavadinimas') ?></strong></td>
         </tr>
             <?php

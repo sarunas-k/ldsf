@@ -10,7 +10,7 @@ html {
     padding: 1rem;
 }
 .site-main .site-content :where(.is-layout-flex) {
-    gap: 2rem;
+    gap: 1rem;
 }
 .blog-entry-thumbnail {
     margin-bottom: 20px;
@@ -24,6 +24,7 @@ html {
 .naujiena #right-sidebar {
     width: 100%;
 }
+.events-table > tbody > tr > td.event-date,
 .results-table > tbody > tr > td.event-date,
 .results-table > tbody > tr > td.event-file {
     text-wrap: nowrap;
@@ -222,8 +223,8 @@ html {
     text-decoration: none !important;
 }
 .custom-slider .slick-slide {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 .custom-slider .slick-slide .custom-slide-image {
     text-align: center;
@@ -290,6 +291,9 @@ html {
     .custom-slider .slick-next {
         right: 10px;
     }
+    .custom-slider .slick-slide .custom-slide-title {
+        font-size: 0.9rem;
+    }
 }
 @media screen and (max-width: 768px) {
     .custom-slider {
@@ -333,8 +337,7 @@ html {
     color: #324a6d;
 }
 .custom-post-grid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 0 0 1rem 0 !important;
 }
 .custom-post-grid p {
     color: #636363;
