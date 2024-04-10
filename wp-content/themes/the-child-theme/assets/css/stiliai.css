@@ -279,7 +279,12 @@ html {
 .custom-slider.gallery-slider .slick-prev:before {
     content: "\f137";
 }
-
+.group-partners {
+    padding-bottom: 1rem;
+}
+.group-partners .wp-block-column img {
+    scale: 0.8;
+}
 @media screen and (max-width: 1366px) {
     .custom-slider {
         padding-left: 30px;
@@ -295,7 +300,19 @@ html {
         font-size: 0.9rem;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
+    #content-wrap .custom-slider.post-slider .slick-slide {
+        padding: 0 5rem;
+    }
+    #content-wrap .custom-slider.post-slider .slick-prev {
+        left: 2.5rem;
+    }
+    #content-wrap .custom-slider.post-slider .slick-next {
+        right: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
     .custom-slider {
         padding-left: 15px;
         padding-right: 15px;
@@ -316,11 +333,14 @@ html {
         padding: 0;
     }
     .bottom-slider .custom-slider .slick-slide {
-        padding: 3rem;
+        padding: 1rem 2rem;
     }
     .bottom-slider .custom-slider .slick-slide .custom-slide-image img {
         object-fit: cover;
         max-height: unset;
+    }
+    .group-partners figure img {
+        scale: 0.7;
     }
 }
 .renginiai-accordion .accordion-button {
@@ -401,7 +421,7 @@ html {
     font-size: 4.8em;
     color: #1b3e41;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .all-news h2 {
         font-size: 3em;
     }
@@ -415,9 +435,12 @@ html {
         padding: 0 30px;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .main-content-group-block {
         padding: 0 10px;
+    }
+    #content-wrap .main-content-group-block .main-columns-block .bottom-slider {
+        padding: 0;
     }
 }
 .main-content-group-block .main-columns-block {
