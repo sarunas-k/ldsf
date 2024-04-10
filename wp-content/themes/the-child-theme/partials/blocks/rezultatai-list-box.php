@@ -7,7 +7,7 @@
  * get_my_block('rezultatai')
  *
  */
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$results_page = isset($_GET['results_page']) ? $_GET['results_page'] : 1;
 $rezultatai = new WP_Query(
     array(
         'post_type' => 'rezultatas_senas',
@@ -15,12 +15,12 @@ $rezultatai = new WP_Query(
         'meta_key' => 'data',
         'orderby' => 'meta_value',
         'order' => 'ASC',
-        'paged' => $paged)
+        'paged' => $results_page)
     );
 if ($rezultatai->have_posts()) {
 
 ?>
-<table class="table results-table">
+<table class="table results-table" id="rtable">
   <thead>
         <th>Data</th>
         <th>Pavadinimas</th>
@@ -44,9 +44,9 @@ while($rezultatai->have_posts()) {
 <div class="pagination-buttons">
 <?php
 echo paginate_links( array(
-	'base' => esc_url(get_site_url() . '/rezultatai-seni/page/%#%'),
-	'format' => '?paged=%#%',
-	'current' => max( 1, $paged ),
+	'base' => esc_url(get_site_url() . '?results_page=%#%'),
+	'format' => '?results_page=%#%',
+	'current' => max( 1, $results_page ),
 	'total' => $rezultatai->max_num_pages
 ) );
 ?>
