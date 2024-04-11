@@ -63,7 +63,7 @@ if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
         while ($query->have_posts()) {
             $query->the_post();
             ?>
-            <div class="item-wrapper <?php echo $columnClass; ?>">
+            <article class="item-wrapper <?php echo $columnClass; ?>">
                 <div class="custom-post-grid-item <?php if (array_key_exists('shadow', $args)) { echo 'box-shadow'; } ?>">
                     <div class="custom-post-grid-image">
                         <a href="<?php the_permalink(); ?>">
@@ -87,7 +87,7 @@ if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
                         <?php } ?>
                     </div>
                 </div>
-            </div>
+            </article>
         <?php
         }
         ?>

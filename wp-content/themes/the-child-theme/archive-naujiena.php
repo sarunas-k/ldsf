@@ -7,19 +7,18 @@
 
 get_header(); ?>
 
-	<div id="content-wrap" class="container clr">
-
+	<div id="content-wrap" class="container clr all-news">
+		<h1>Naujienos</h1>
 		<div id="primary" class="content-area clr">
 
 			<div id="content" class="site-content clr"><?php
 
 				if (have_posts()) :
-                    ?><div class="all-news">
-                        <h2>Naujienos</h2>
+                    ?><div class="news-archive">
                             <?php get_my_block('post-grid', [
-                                'post_type' => 'naujiena', 
-                                'excerpt' => true, 
-                                'date' => true, 
+                                'post_type' => 'naujiena',
+                                'excerpt' => true,
+                                'date' => true,
                                 'shadow' => true,
 								'columns' => 2,
 								'image_size' => 3,
@@ -30,12 +29,12 @@ get_header(); ?>
 				else :?>
 				<?php
 					get_template_part( 'partials/none' );?>
-				<?php 
-				endif; 
+				<?php
+				endif;
 				?>
 
 			</div><!-- #content -->
-			
+
 
 		</div><!-- #primary -->
         <?php do_action( 'ocean_after_primary' ); ?>
