@@ -38,7 +38,7 @@ $heading = apply_filters( 'ocean_single_post_heading', $heading );
 <?php
 get_template_part( 'partials/single/media/blog-single', 'thumbnail');?>
 <div class="row">
-	<div class="col-md-8"><?php
+	<div class="col-lg-8"><?php
 	// Loop through elements.
 	foreach ( $elements as $element ) {
 
@@ -73,6 +73,6 @@ get_template_part( 'partials/single/media/blog-single', 'thumbnail');?>
 	}
 	?>
 	</div>
-	<div class="col-md-4"><?php do_action( 'ocean_after_primary' ); ?></div>
+	<div class="col-lg-4"><?php do_action( 'ocean_after_primary' ); ?></div>
 	</div>
 </article>
