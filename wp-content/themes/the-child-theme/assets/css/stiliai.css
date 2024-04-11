@@ -11,6 +11,12 @@ h4 {
     color: #1b3e41;
 }
 
+::before {
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 #site-header-inner {
     height: fit-content !important;
 }
@@ -60,9 +66,6 @@ h4 {
 #right-sidebar nav ul li::before {
     content: '\f0da';
     font: normal normal normal 13px/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color: #df453e;
 }
 
@@ -357,12 +360,9 @@ h4 {
     font-weight: 500;
 }
 
-.custom-slider .slick-arrow:before {
+.custom-slider .slick-arrow::before {
     display: inline-block;
     font: normal normal normal 30px/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color: #778B8D !important;
     z-index: 99;
 }
@@ -588,9 +588,32 @@ body.single-naujiena .naujiena .thumbnail {
     }
 
     #wrap header nav .hfe-nav-menu ul li a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        padding-left: 0;
+    }
+    #wrap header nav span {
+        border: 0;
+    }
+    #wrap header nav .hfe-nav-menu ul li a span {
+        display: inline-block;
+        flex-grow: 1;
+        text-align: right;
+    }
+    #wrap header nav .hfe-nav-menu ul li a::before {
+        content: '\f0da';
+        font: normal normal normal 13px/1 FontAwesome;
+        margin-right: 10px;
+        position: initial;
+        display: inline-block;
     }
 
+    #wrap header nav ul .menu-item .sub-menu {
+        padding-left: 1.25rem;
+    }
+
+    #wrap header nav ul .menu-item .sub-menu a.hfe-sub-menu-item {
+        justify-content: flex-start;
+    }
     #wrap header .hfe-nav-menu__layout-horizontal .hfe-nav-menu .sub-arrow {
         margin-left: 4px;
         font-size: 0.8rem;
@@ -722,9 +745,6 @@ body.single-naujiena .naujiena .thumbnail {
 .custom-post-grid .custom-post-grid-content .custom-post-grid-footer p::before {
     content: '\f0da';
     font: normal normal normal 13px/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     margin-right: 5px;
 }
 
@@ -789,16 +809,21 @@ body.single-naujiena .naujiena .thumbnail {
     max-width: 100%;
 }
 
-#wrap header nav {
+#wrap header nav .hfe-menu-item,
+#wrap header nav .hfe-sub-menu-item,
+#wrap header nav .menu-item {
     font-size: initial;
+    font-family: Poppins;
     letter-spacing: -.03rem;
 }
-
+header nav .hfe-dropdown {
+    transition: opacity .3s ease;
+}
 header nav:not(.hfe-dropdown) a.hfe-menu-item {
     color: #324a6d;
 }
 
-#wrap header nav>ul>li a.hfe-menu-item:hover,
-#wrap header nav>ul>li a.hfe-menu-item:focus {
+#wrap header nav>ul>li a:hover,
+#wrap header nav>ul>li a:focus {
     outline: none !important;
 }
