@@ -43,9 +43,9 @@ if (array_key_exists('image_size', $args) && is_numeric($args['image_size']))
 $columnClass = 'col-xs-12';
 if (array_key_exists('columns', $args)) {
     if ($args['columns'] == 2) {
-        $columnClass = 'col-sm-6';
+        $columnClass = 'col-md-6';
     } elseif ($args['columns'] == 3) {
-        $columnClass = 'col-sm-6 col-lg-4';
+        $columnClass = 'col-sm-6 col-xl-4';
     }
 }
 
