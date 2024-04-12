@@ -37,8 +37,8 @@ if (!defined('ABSPATH')) {
 
 	<div class="row">
 		<div class="col-md-8 main-section">
-			<div class="entry-content clr" <?php oceanwp_schema_markup('entry_content'); ?>>
-				<?php the_content(); ?>
+			<div class="entry-content description clr" <?php oceanwp_schema_markup('entry_content'); ?>>
+				<?php the_field('aprasymas'); ?>
 			</div><!-- .entry -->
 
 			<div class="renginiai">
@@ -51,7 +51,7 @@ if (!defined('ABSPATH')) {
 
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 sidebar-small">
 
 			<?php get_my_block('small-sidebar') ?>
 
