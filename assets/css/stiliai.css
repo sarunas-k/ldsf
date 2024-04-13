@@ -426,7 +426,7 @@ body.post-type-archive-narys .custom-blog-entries {
 }
 
 .single-disciplina .disciplina .renginiai {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .single-disciplina .disciplina .renginiai h2 {
@@ -1113,6 +1113,19 @@ body.post-type-archive-naujiena #primary {
 
 .main-content-group-block .main-columns-block .bottom-slider {
   padding: 2rem 0;
+}
+
+.main-content-group-block .main-columns-block .bottom-slider .slick-slide {
+  filter: grayscale(1);
+  opacity: .5;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.main-content-group-block .main-columns-block .bottom-slider .slick-slide:hover,
+.main-content-group-block .main-columns-block .bottom-slider .slick-slide:focus {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .main-content-group-block h2.main-page-heading {

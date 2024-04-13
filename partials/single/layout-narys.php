@@ -46,7 +46,7 @@ if (!defined('ABSPATH')) {
 			if (has_post_thumbnail()) {
 				get_template_part('partials/single/media/blog-single', 'thumbnail');
 			} else { ?>
-				<div class="thumbnail"><img src="/wp-website/wp-content/uploads/2024/02/narys-logo-1-300x233.jpg" /></div>
+				<div class="thumbnail"><img src="/wp-prod/wp-content/uploads/2024/02/narys-logo-1-300x233.jpg" /></div>
 			<?php } ?>
 
 		</div>
