@@ -105,6 +105,11 @@ body.home #main .custom-post-grid-content>p {
   padding: .5rem;
 }
 
+#right-sidebar form input[type=search]:focus {
+  background-color: #FFFFFF;
+  border-right: 1px solid #636363;
+}
+
 #right-sidebar .recent-posts-details a {
   color: #1b3e41;
   font-size: 0.9rem;
