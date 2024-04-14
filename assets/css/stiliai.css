@@ -1283,3 +1283,16 @@ header nav .hfe-dropdown {
 #wrap header a.hfe-sub-menu-item:focus {
   color: white;
 }
+
+body.home .group-social .facebook-iframe {
+  z-index: 1;
+  top: -4rem;
+  position: relative;
+}
+
+body.home .group-social .social-notice {
+  width: 100%;
+  max-width: 500px;
+  height: 3rem;
+  padding: 1rem;
+}
