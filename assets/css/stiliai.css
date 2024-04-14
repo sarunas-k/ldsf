@@ -778,17 +778,47 @@ body.single-naujiena .naujiena .row>div:first-child {
     padding: 0;
   }
 
+  #wrap header .site-navigation-ldsf nav {
+    top: 58px;
+    position: absolute;
+  }
+
+  #wrap header .site-navigation-ldsf .hfe-dropdown {
+    box-shadow: 0px 15px 1rem #00000012;
+  }
+
+  #wrap header .site-navigation-ldsf .hfe-nav-menu .hfe-menu-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #wrap header .site-navigation-ldsf .hfe-nav-menu .hfe-sub-menu-item {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  #wrap header .site-navigation-ldsf .hfe-dropdown,
+  #wrap header .site-navigation-ldsf .hfe-nav-menu > .menu-item,
+  #wrap header .site-navigation-ldsf .hfe-nav-menu > .menu-item a.hfe-menu-item {
+    background-color: #FFFFFF;
+  }
+
+  #wrap header .site-navigation-ldsf nav .hfe-nav-menu > .menu-item a.hfe-menu-item {
+    color: #324a6d;
+    font-weight: 500;
+  }
+
+  #wrap header .site-navigation-ldsf nav .hfe-nav-menu > .menu-item a.hfe-menu-item:hover,
+  #wrap header .site-navigation-ldsf nav .hfe-nav-menu > .menu-item a.hfe-menu-item:focus {
+    color: #df453e;
+  }
+
   #wrap header .site-navigation-ldsf nav>ul>li {
-    padding: 0 2rem;
+    padding: 0;
   }
 
   #wrap header .site-navigation-ldsf nav>ul>li:first-child {
     padding-top: 1rem;
-  }
-
-  #wrap header .site-navigation-ldsf nav {
-    top: 58px;
-    position: absolute;
   }
 
   #wrap header .site-navigation-ldsf nav ul li a {
@@ -796,7 +826,7 @@ body.single-naujiena .naujiena .row>div:first-child {
     padding-bottom: .8rem;
   }
 
-  #wrap header .site-navigation-ldsf nav ul li a:focus {
+  #wrap header .site-navigation-ldsf nav ul li a.hfe-sub-menu-item:focus {
     color: #FFFFFF;
   }
 
@@ -913,40 +943,17 @@ body.single-naujiena .naujiena .row>div:first-child {
     width: 200px;
   }
 
-  #wrap header nav .hfe-nav-menu ul li a {
-    font-size: 0.9rem;
-    padding-left: 0;
-  }
-
   #wrap header nav span {
     border: 0;
   }
 
-  #wrap header nav .hfe-nav-menu ul li a span {
-    display: inline-block;
-    flex-grow: 1;
-    text-align: right;
+  #wrap header nav .hfe-nav-menu a.hfe-menu-item {
+    font-size: 1rem;
+    padding: 15px;
   }
 
-  #wrap header nav .hfe-nav-menu ul li a::before {
-    content: '\f0da';
-    font: normal normal normal 13px/1 FontAwesome;
-    margin-right: 10px;
-    position: initial;
-    display: inline-block;
-  }
-
-  #wrap header nav ul .menu-item .sub-menu {
-    padding-left: 1.25rem;
-  }
-
-  #wrap header nav ul .menu-item .sub-menu a.hfe-sub-menu-item {
-    justify-content: flex-start;
-  }
-
-  #wrap header .hfe-nav-menu__layout-horizontal .hfe-nav-menu .sub-arrow {
-    margin-left: 4px;
-    font-size: 0.8rem;
+  #wrap header nav .sub-menu a.hfe-sub-menu-item {
+    font-size: 0.9rem;
   }
 
   body.single-naujiena #main #content-wrap {
@@ -1219,10 +1226,42 @@ body.post-type-archive-naujiena #primary {
   height: 1rem !important;
 }
 
+#wrap header .sub-menu {
+  padding-left: 1.25rem;
+}
+
+#wrap header nav a.hfe-menu-item {
+  font-size: 1.1rem;
+}
+
+header nav:not(.hfe-dropdown) a.hfe-menu-item {
+  color: #324a6d;
+}
+
+#wrap header nav a.hfe-sub-menu-item {
+  font-size: 1rem;
+  padding-left: 0;
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+  justify-content: flex-start;
+}
+
+#wrap header nav a.hfe-sub-menu-item::before {
+  content: '\f0da';
+  font: normal normal normal 13px/1 FontAwesome;
+  margin-right: 10px;
+  position: initial;
+  display: inline-block;
+}
+
+#wrap header nav .sub-menu a.hfe-sub-menu-item span {
+  display: inline-block;
+  flex-grow: 1;
+  text-align: right;
+}
+
 #wrap header nav .hfe-menu-item,
-#wrap header nav .hfe-sub-menu-item,
-#wrap header nav .menu-item {
-  font-size: initial;
+#wrap header nav .hfe-sub-menu-item {
   font-family: Poppins;
   letter-spacing: -.03rem;
 }
@@ -1231,8 +1270,9 @@ header nav .hfe-dropdown {
   transition: opacity .3s ease;
 }
 
-header nav:not(.hfe-dropdown) a.hfe-menu-item {
-  color: #324a6d;
+#wrap header .hfe-nav-menu__layout-horizontal .hfe-nav-menu .sub-arrow {
+  margin-left: 6px;
+  font-size: 0.8rem;
 }
 
 #wrap header nav>ul>li a:hover,
@@ -1240,6 +1280,6 @@ header nav:not(.hfe-dropdown) a.hfe-menu-item {
   outline: none !important;
 }
 
-#wrap header nav>ul>li a.hfe-sub-menu-item:focus {
+#wrap header a.hfe-sub-menu-item:focus {
   color: white;
 }
