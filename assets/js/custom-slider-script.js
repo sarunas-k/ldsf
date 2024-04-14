@@ -44,7 +44,7 @@ $(document).ready(function(){
     if ($.isNumeric(show) && show > 0) {
 
     $('.custom-slider.post-slider').slick({
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 5000,
       slidesToShow: show,
       slidesToControl: show,
@@ -56,6 +56,11 @@ $(document).ready(function(){
         breakpoint: 1024,
         settings: {
           slidesToShow: 4
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
         }
       }, {
         breakpoint: 650,
