@@ -594,7 +594,7 @@ body.single-naujiena .naujiena .row>div:first-child {
 
   #content-wrap .custom-slider.post-slider .slick-slide {
     margin: 0 auto;
-    width: 50vw !important;
+    width: 60vw !important;
   }
 
   #content-wrap .custom-slider.post-slider .slick-prev,
@@ -610,11 +610,11 @@ body.single-naujiena .naujiena .row>div:first-child {
 
   #content-wrap .custom-slider.post-slider .slick-slide .custom-slide-image,
   #content-wrap .custom-slider.post-slider .slick-slide .custom-slide-title {
-    width: 50vw;
+    width: 60vw;
   }
 
   #content-wrap .custom-slider.post-slider .slick-slide .custom-slide-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1rem;
   }
 
