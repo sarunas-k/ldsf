@@ -1,14 +1,21 @@
-on: push
-name: 🚀 Deploy website on push
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+name: Deploy website on push, pull request and manually
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: Get latest code
       uses: actions/checkout@v4
-    
-    - name: 📂 Sync files
+
+    - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.ftp_server }}
