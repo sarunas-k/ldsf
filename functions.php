@@ -136,8 +136,23 @@ function enqueue_my_assets() {
 	wp_enqueue_script('all-helper', get_theme_file_uri() . '/assets/js/all.js', ['jquery-core']);
 	// CSS minimized stiliai.css
 	wp_enqueue_style( 'stiliai', get_theme_file_uri() . '/build/stiliai.min.css', ['oceanwp-style', 'wp-block-library', 'bootstrap.min']);
-	if (is_page(1384) || is_archive('naujiena') || is_page(330))
-		wp_enqueue_script('testing', get_theme_file_uri() . '/assets/js/leadhat-embedded.js');
+	if (is_page(1384) || is_archive('naujiena') || is_single(330)) {
+		wp_enqueue_script('leadhat', get_theme_file_uri() . '/assets/js/leadhat-embedded.js');
+		add_filter( 'wp_script_attributes', 'add_type_attribute', 10, 1 );
+		function add_type_attribute( $attributes ) {
+			if ( isset( $attributes['id'] ) && $attributes['id'] === 'leadhat-js' ) {
+				$attributes['type'] = 'module';
+			}
+			return $attributes;
+		}
+		add_action('the_content', 'insert_div');
+		function insert_div($content) { ?>
+			<!-- <div data-lhappid="c1e54e65-e260-40a3-a718-04b501073322"></div> -->
+			<?php
+			return $content;
+		}
+	}
+
 }
 
 // Turn off default CSS
