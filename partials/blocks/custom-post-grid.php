@@ -24,16 +24,14 @@ $query_args = array(
 );
 
 if (array_key_exists('filter_tax', $args)) {
-  $filter_arg = array(
+  $query_args['tax_query'] = array(
     array(
       'taxonomy' => key($args['filter_tax']),
       'field' => 'slug',
       'terms' => current($args['filter_tax'])
     )
   );
-  $query_args['tax_query'] = $filter_arg;
 }
-
 
 if (array_key_exists('limit', $args))
   $query_args['posts_per_page'] = $args['limit'];
