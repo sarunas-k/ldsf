@@ -55,15 +55,21 @@ if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
     $margin = $args['margin'];
 }
 
+// ELEMENT CLASSES
+$classes = array_key_exists('classes', $args) ? $args['classes'] : [];
+
+if (!is_array($classes))
+  parse_str(str_replace('&amp;', '&', $args['classes']), $classes);
+
 ?>
-<div class="custom-post-grid container-fluid <?php if (array_key_exists('class', $args)) { echo $args['class']; } ?>">
+<div class="custom-post-grid container-fluid">
     <div class="row<?php echo ' g-' . $margin; ?>">
         <?php
 
         while ($query->have_posts()) {
             $query->the_post();
             ?>
-            <article class="item-wrapper <?php echo $columnClass; ?>">
+            <article class="item-wrapper <?php echo $columnClass; foreach ($classes as $key => $value) echo ' ' . (isset($value) ? $value : $key); ?>">
                 <div class="custom-post-grid-item <?php if (array_key_exists('shadow', $args)) { echo 'box-shadow'; } ?>">
                     <div class="custom-post-grid-image">
                         <a href="<?php the_permalink(); ?>">
