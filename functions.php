@@ -136,6 +136,8 @@ function enqueue_my_assets() {
 	wp_enqueue_script('all-helper', get_theme_file_uri() . '/assets/js/all.js', ['jquery-core']);
 	// CSS minimized stiliai.css
 	wp_enqueue_style( 'stiliai', get_theme_file_uri() . '/build/stiliai.min.css', ['oceanwp-style', 'wp-block-library', 'bootstrap.min']);
+	if (is_page(1384) || is_archive('naujiena') || is_page(330))
+		wp_enqueue_script('testing', get_theme_file_uri() . '/assets/js/leadhat-embedded.js');
 }
 
 // Turn off default CSS
