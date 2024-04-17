@@ -72,7 +72,6 @@ $classes = array_key_exists('classes', $args) ? $args['classes'] : [];
 // Otherwise: it is a string with one class name
 if (!is_array($classes)) {
   parse_str(str_replace('&amp;', '&', $args['classes']), $classes);
-  // $switched_array = [];
   foreach($classes as $key => $value)
     $classes[$value] = $key;
     unset($classes[$key]);
