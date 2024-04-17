@@ -11,7 +11,9 @@ get_header(); ?>
 	<h1>Naujienos</h1>
 	<div id="primary" class="content-area clr">
 
-		<div id="content" class="site-content clr"><?php
+		<div id="content" class="site-content clr">
+		<div data-lhappid="c1e54e65-e260-40a3-a718-04b501073322"></div>
+			<?php
 
 		if (have_posts()):
 			?>
