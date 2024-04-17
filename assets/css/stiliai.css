@@ -833,6 +833,15 @@ body.single-naujiena .naujiena .row>div:first-child {
     width: 100%;
   }
 
+  body.home #main .custom-post-grid .item-wrapper:nth-child(3n+0) h3 {
+    font-size: 20px;
+  }
+
+  #main .custom-post-grid .grid-item-large h3,
+  #main .custom-post-grid .grid-item-small h3 {
+    font-size: 20px;
+  }
+
   .news #right-sidebar {
     float: none;
     width: initial;
