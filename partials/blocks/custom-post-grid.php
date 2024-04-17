@@ -15,44 +15,55 @@
  *
  */
 if (!array_key_exists('post_type', $args))
-    return;
+  return;
 
 $query_args = array(
-    'post_type' => $args['post_type'],
-    'orderby' => 'date',
-    'order' => 'DESC'
+  'post_type' => $args['post_type'],
+  'orderby' => 'date',
+  'order' => 'DESC'
 );
+
+if (array_key_exists('filter_tax', $args)) {
+  $filter_arg = array(
+    array(
+      'taxonomy' => key($args['filter_tax']),
+      'field' => 'slug',
+      'terms' => current($args['filter_tax'])
+    )
+  );
+  $query_args['tax_query'] = $filter_arg;
+}
 
 
 if (array_key_exists('limit', $args))
-    $query_args['posts_per_page'] = $args['limit'];
+  $query_args['posts_per_page'] = $args['limit'];
 
 if (array_key_exists('start', $args))
-    $query_args['offset'] = $args['start'] - 1;
+  $query_args['offset'] = $args['start'] - 1;
 
 $query = new WP_Query($query_args);
 
 if (!$query->have_posts())
-    return;
+  return;
 
 $image_size = 4;
 if (array_key_exists('image_size', $args) && is_numeric($args['image_size']))
-    $image_size = $args['image_size'];
+  $image_size = $args['image_size'];
 
 // COLUMNS
 $columnClass = 'col-xs-12';
 if (array_key_exists('columns', $args)) {
-    if ($args['columns'] == 2) {
-        $columnClass = 'col-md-6';
-    } elseif ($args['columns'] == 3) {
-        $columnClass = 'col-sm-6 col-xl-4';
-    }
+  if ($args['columns'] == 2) {
+    $columnClass = 'col-md-6';
+  } elseif ($args['columns'] == 3) {
+    $columnClass = 'col-sm-6 col-xl-4';
+  }
 }
 
 // MARGIN BETWEEN POST GRID 1 - 5
 $margin = 3;
 if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
-    $margin = $args['margin'];
+  $margin = $args['margin'];
 }
 
 // ELEMENT CLASSES
@@ -63,39 +74,44 @@ if (!is_array($classes))
 
 ?>
 <div class="custom-post-grid container-fluid">
-    <div class="row<?php echo ' g-' . $margin; ?>">
-        <?php
+  <div class="row<?php echo ' g-' . $margin; ?>">
+    <?php
 
-        while ($query->have_posts()) {
-            $query->the_post();
-            ?>
-            <article class="item-wrapper <?php echo $columnClass; foreach ($classes as $key => $value) echo ' ' . (isset($value) ? $value : $key); ?>">
-                <div class="custom-post-grid-item <?php if (array_key_exists('shadow', $args)) { echo 'box-shadow'; } ?>">
-                    <div class="custom-post-grid-image">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('crop-' . $image_size, array('alt' => get_the_title(), 'itemprop' => 'image', )); ?>
-                        </a>
-                    </div>
-                    <div class="custom-post-grid-content">
+    while ($query->have_posts()) {
+      $query->the_post();
+      ?>
+      <article
+        class="item-wrapper <?php echo $columnClass;
+        foreach ($classes as $key => $value)
+          echo ' ' . (isset($value) ? $value : $key); ?>">
+        <div class="custom-post-grid-item <?php if (array_key_exists('shadow', $args)) {
+          echo 'box-shadow';
+        } ?>">
+          <div class="custom-post-grid-image">
+            <a href="<?php the_permalink(); ?>">
+              <?php the_post_thumbnail('crop-' . $image_size, array('alt' => get_the_title(), 'itemprop' => 'image', )); ?>
+            </a>
+          </div>
+          <div class="custom-post-grid-content">
 
-                        <h3>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                            </a>
-                        </h3>
-                        <?php if (array_key_exists('excerpt', $args) && $args['excerpt'] == true) {
-                                 the_excerpt();
-                         }
-                         if (array_key_exists('date', $args) && $args['date'] == true) { ?>
-                            <div class="custom-post-grid-footer">
-                                    <p><?php echo get_the_date(); ?></p>
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </article>
-        <?php
-        }
-        ?>
-    </div>
+            <h3>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </h3>
+            <?php if (array_key_exists('excerpt', $args) && $args['excerpt'] == true) {
+              the_excerpt();
+            }
+            if (array_key_exists('date', $args) && $args['date'] == true) { ?>
+              <div class="custom-post-grid-footer">
+                <p><?php echo get_the_date(); ?></p>
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+      </article>
+      <?php
+    }
+    ?>
+  </div>
 </div>

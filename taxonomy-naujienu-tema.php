@@ -23,6 +23,8 @@ get_header(); ?>
 			if (have_posts()): ?>
 					<?php get_my_block('post-grid', [
 						'post_type' => 'naujiena',
+						// Filter by custom category. Global $taxonomy and $term variables
+						'filter_tax' => array($taxonomy => $term),
 						'excerpt' => true,
 						'date' => true,
 						'columns' => 2,
