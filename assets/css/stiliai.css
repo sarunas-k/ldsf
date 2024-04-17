@@ -1149,12 +1149,12 @@ body.post-type-archive-naujiena #main .custom-post-grid-item >.custom-post-grid-
   color:#df453e;
 }
 
-.custom-post-grid.grid-item-small h3 {
-  font-size: 15px;
+.custom-post-grid .grid-item-small h3 {
+  font-size: 1rem;
 }
 
-.custom-post-grid.grid-item-large h3 {
-  font-size: 18px;
+.custom-post-grid .grid-item-large h3 {
+  font-size: 1.6rem;
 }
 
 .custom-post-grid .custom-post-grid-content .custom-post-grid-footer p {

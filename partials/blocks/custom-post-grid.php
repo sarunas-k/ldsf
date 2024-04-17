@@ -64,11 +64,19 @@ if (array_key_exists('margin', $args) && is_numeric($args['margin'])) {
   $margin = $args['margin'];
 }
 
-// ELEMENT CLASSES
+// Set classes for individual post html element
 $classes = array_key_exists('classes', $args) ? $args['classes'] : [];
 
-if (!is_array($classes))
+// If $classes is not a PHP array and contains ampersand,
+// it is query string and is parsed
+// Otherwise: it is a string with one class name
+if (!is_array($classes)) {
   parse_str(str_replace('&amp;', '&', $args['classes']), $classes);
+  // $switched_array = [];
+  foreach($classes as $key => $value)
+    $classes[$value] = $key;
+    unset($classes[$key]);
+}
 
 ?>
 <div class="custom-post-grid container-fluid">
@@ -79,9 +87,7 @@ if (!is_array($classes))
       $query->the_post();
       ?>
       <article
-        class="item-wrapper <?php echo $columnClass;
-        foreach ($classes as $key => $value)
-          echo ' ' . (isset($value) ? $value : $key); ?>">
+        class="item-wrapper <?php echo $columnClass; foreach ($classes as $key => $value) echo ' ' . $value; ?>">
         <div class="custom-post-grid-item <?php if (array_key_exists('shadow', $args)) {
           echo 'box-shadow';
         } ?>">
