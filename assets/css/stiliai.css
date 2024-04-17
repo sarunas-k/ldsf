@@ -32,6 +32,10 @@ body.home #main .custom-post-grid .item-wrapper:nth-child(3n+0) {
   width: 100%;
 }
 
+body.home #main .custom-post-grid .item-wrapper:nth-child(3n+0) h3 {
+  font-size: 1.6rem;
+}
+
 body.home #main .custom-post-grid-item {
   display: flex;
   flex-direction: column;
