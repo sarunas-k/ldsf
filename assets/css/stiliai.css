@@ -32,6 +32,10 @@ body.home #main .custom-post-grid .item-wrapper:nth-child(3n+0) {
   width: 100%;
 }
 
+body.home #main .custom-post-grid .item-wrapper:nth-child(3n+0) h3 {
+  font-size: 1.6rem;
+}
+
 body.home #main .custom-post-grid-item {
   display: flex;
   flex-direction: column;
@@ -827,6 +831,15 @@ body.single-naujiena .naujiena .row>div:first-child {
 
   .news .content-area {
     width: 100%;
+  }
+
+  body.home #main .custom-post-grid .item-wrapper:nth-child(3n+0) h3 {
+    font-size: 20px;
+  }
+
+  #main .custom-post-grid .grid-item-large h3,
+  #main .custom-post-grid .grid-item-small h3 {
+    font-size: 20px;
   }
 
   .news #right-sidebar {
