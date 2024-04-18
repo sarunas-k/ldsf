@@ -13,6 +13,7 @@ get_header(); ?>
 
 		<div id="content" class="site-content clr">
 		<div data-lhappid="c1e54e65-e260-40a3-a718-04b501073322"></div>
+		<div data-lhappid="c1e54e65-e260-40a3-a718-04b501073322"></div>
 			<?php
 
 		if (have_posts()):
