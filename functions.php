@@ -145,7 +145,7 @@ function enqueue_my_assets()
 	// CSS minimized stiliai.css
 	wp_enqueue_style('stiliai', get_theme_file_uri() . '/build/stiliai.min.css', ['oceanwp-style', 'wp-block-library', 'bootstrap.min']);
 	if (is_page(1384) || is_archive('naujiena') || is_single(330)) {
-		wp_enqueue_script('leadhat', "http://static.leadhat.ai/embed-dev/next/leadhat-embedded.js");
+		wp_enqueue_script('leadhat', "https://static.leadhat.ai/embed/next/leadhat-embedded.js");
 		add_filter('wp_script_attributes', 'add_type_attribute', 10, 1);
 		function add_type_attribute($attributes) {
 			if (isset($attributes['id']) && $attributes['id'] === 'leadhat-js') {
