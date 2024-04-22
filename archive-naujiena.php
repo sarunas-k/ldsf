@@ -12,8 +12,8 @@ get_header(); ?>
 	<div id="primary" class="content-area clr">
 
 		<div id="content" class="site-content clr">
-		<div data-lhappid="c1e54e65-e260-40a3-a718-04b501073322"></div>
-		<div data-lhappid="c1e54e65-e260-40a3-a718-04b501073322"></div>
+		<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>
+		<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>
 			<?php
 
 		if (have_posts()):
