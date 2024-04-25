@@ -9,5 +9,8 @@ During hours spent writing and customizing the code, I learned how Wordpress wor
 ## Tools
 HTML, PHP, JavaScript, Node.js, JQuery, Slick.js, CSS (SASS), Flexbox, Bootstrap
 
-## Version control, automatic deployment
+## Version control, automatic deployment 
 Git, GitHub Actions
+
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+
