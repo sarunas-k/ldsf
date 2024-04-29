@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prettier/plugin-php": "github:prettier/plugin-php",
+    "prettier": "^3.2.5",
     "vite": "^5.1.5",
     "vite-plugin-full-reload": "^1.1.0"
   },
@@ -22,5 +24,13 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "prettier": {
+    "plugins": [
+      "@prettier/plugin-php"
+    ],
+    "braceStyle": "1tbs",
+    "useTabs": true,
+    "singleQuote": true
+  }
 }

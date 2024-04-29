@@ -12,8 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area clr">
 
 		<div id="content" class="site-content clr">
-		<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>
-		<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>
+
 			<?php
 
 		if (have_posts()):
@@ -42,7 +41,8 @@ get_header(); ?>
 
 	</div><!-- #primary -->
 	<?php do_action('ocean_after_primary'); ?>
-
+	<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>
+	<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>
 </div><!-- #content-wrap -->
 
 
