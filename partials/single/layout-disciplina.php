@@ -55,7 +55,6 @@ if (!defined('ABSPATH')) {
 		</div>
 	</div>
 	<?php if ($post->ID == 330) {
- 	echo '<div data-lhappid="2bddd1d0-ffe7-4d03-9c20-b39295a934a2"></div>';
  } ?>
 
 </article>
