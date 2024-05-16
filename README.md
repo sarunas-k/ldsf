@@ -1,4 +1,4 @@
-# Sandbox project using Wordpress CMS
+# Sandbox
 - _Custom post types and meta fields_
 - _Developed reusable blocks like post grid, carousel and team members_
 - _Responsive to screen size_
