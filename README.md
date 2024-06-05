@@ -1,4 +1,5 @@
 # Wordpress demo
+[No need to build, see it here](https://applications.w5.lt/cms)
 
 This application was built with PHP on top of Wordpress CMS. Layout is a custom built theme which is clean and responsive. Custom plugins and reusable blocks were developed to achieve this, utilizing Wordpress APIs, actions and filters.
 
