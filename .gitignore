@@ -2,3 +2,5 @@ node_modules
 babel.config.js
 postcss.config.js
 rollup.config.js
+screenshot.png
+package-lock.json

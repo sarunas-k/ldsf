@@ -189,3 +189,22 @@ function change_translations($words)
 	}
 	return $words;
 }
+
+add_filter('template_include', 'use_different_template');
+
+function use_different_template($template){
+
+   if(is_post_type_archive('naujiena'))
+       $template = ($_template = locate_template('templates/archive-naujiena.php')) ? $_template : $template;
+
+   if(is_post_type_archive('narys'))
+       $template = ($_template = locate_template('templates/archive-narys.php')) ? $_template : $template;
+
+   if(is_post_type_archive('renginys'))
+       $template = ($_template = locate_template('templates/archive-renginys.php')) ? $_template : $template;
+
+   if(is_tax('naujienu-tema'))
+       $template = ($_template = locate_template('templates/taxonomy-naujienu-tema.php')) ? $_template : $template;
+
+   return $template;
+}
