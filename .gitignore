@@ -1,6 +1,10 @@
 node_modules
+vendor
 babel.config.js
 postcss.config.js
 rollup.config.js
 screenshot.png
 package-lock.json
+dev-functions.php
+composer.*
+style.css
