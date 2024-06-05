@@ -584,6 +584,10 @@ body.single-naujiena .naujiena .row>div:first-child {
   padding-bottom: 3rem;
 }
 
+.menu-1-616e62b {
+  overflow: hidden;
+}
+
 /*
     Media Queries
 */
@@ -893,6 +897,26 @@ body.single-naujiena .naujiena .row>div:first-child {
   .single-disciplina .disciplina .entry-header .header-image-title h1 {
     font-size: 2.5rem;
     margin-bottom: .2rem;
+  }
+
+  .hfe-nav-menu__breakpoint-tablet .hfe-active-menu + .hfe-nav-menu__layout-horizontal.hfe-dropdown,
+  .hfe-nav-menu__breakpoint-tablet .hfe-active-menu + .hfe-nav-menu__layout-horizontal.hfe-dropdown ul.hfe-nav-menu,
+  .hfe-nav-menu__breakpoint-tablet .hfe-active-menu + .hfe-nav-menu__layout-vertical.hfe-dropdown {
+    min-height: 352px !important;
+    height: unset;
+  }
+  .hfe-nav-menu__breakpoint-tablet .hfe-nav-menu__layout-horizontal.hfe-dropdown,
+  .hfe-nav-menu__breakpoint-tablet .hfe-nav-menu__layout-horizontal.hfe-dropdown ul.hfe-nav-menu,
+  .hfe-nav-menu__breakpoint-tablet .hfe-nav-menu__layout-vertical.hfe-dropdown {
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 0 !important;
+    transition: all 0.5s ease;
+    height: 0;
+  }
+
+  .hfe-nav-menu__breakpoint-tablet .hfe-nav-menu__layout-horizontal {
+    overflow: hidden;
   }
 }
 
